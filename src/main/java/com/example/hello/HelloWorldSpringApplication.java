@@ -10,18 +10,25 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class HelloWorldSpringApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloWorldSpringApplication.class, args);
+		//SpringApplication.run(HelloWorldSpringApplication.class, args);
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
 		//Load spring config
 
 		Coach currentCoach = context.getBean("myCoach", Coach.class);
+		Coach otherCoach = context.getBean("otherCoach", Coach.class);
 
 		//Retrieve bean from spring container
 
 		//Call methods on the bean
 		currentCoach.getWorkout(); //Workout
 		currentCoach.getFortune(); //Using bean
+
+		System.out.println("Calling other coach next...");
+
+		//Call mthods on the 2nd bean
+		otherCoach.getWorkout();
+		otherCoach.getFortune();
 
 		//context.close();
 

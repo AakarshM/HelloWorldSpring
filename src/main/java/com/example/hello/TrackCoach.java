@@ -20,6 +20,7 @@ public class TrackCoach implements Coach{
 
     @Override
     public void getFortune(){
+        System.out.print("Track Coach: ");
         fService.getFortune();
     }
 

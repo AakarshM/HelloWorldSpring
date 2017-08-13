@@ -9,13 +9,26 @@
           class="com.example.hello.HappyFortuneService">
     </bean>
 
-
+    <!-- For DI using constructor injection-->
     <bean id="myCoach"
-        class="com.example.hello.FightCoach">
+        class="com.example.hello.TrackCoach">
 
         <!-- Set up constructor for injection-->
         <constructor-arg ref="myFortuneService"/>
 
     </bean>
+    <!-- END For DI using constructor injection-->
+
+
+
+    <!-- For DI using setter injection-->
+    <bean id="otherCoach"
+      class="com.example.hello.CricketCoach">
+
+    <!-- Set up constructor for injection-->
+    <property name="fService" ref="myFortuneService"/>
+    </bean>
+    <!-- END For DI using setter injection-->
 
 </beans>
+
