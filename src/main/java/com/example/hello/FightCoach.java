@@ -5,6 +5,12 @@ package com.example.hello;
  */
 public class FightCoach implements Coach{
 
+    private FortuneService fService;
+
+    FightCoach(FortuneService fService){
+        this.fService = fService;
+    }
+
     @Override
     public void getWorkout(){
         System.out.println("Fight tonight!");
