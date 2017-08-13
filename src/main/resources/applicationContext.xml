@@ -27,6 +27,14 @@
 
     <!-- Set up constructor for injection-->
     <property name="fService" ref="myFortuneService"/>
+
+    <!-- ref for dependencies, value for literals -->
+
+    <property name="email" value="abc@xyz.com"/>
+
+    <property name="team" value="BVB"/>
+
+
     </bean>
     <!-- END For DI using setter injection-->
 

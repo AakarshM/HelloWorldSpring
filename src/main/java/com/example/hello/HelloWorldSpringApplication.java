@@ -16,7 +16,7 @@ public class HelloWorldSpringApplication {
 		//Load spring config
 
 		Coach currentCoach = context.getBean("myCoach", Coach.class);
-		Coach otherCoach = context.getBean("otherCoach", Coach.class);
+		CricketCoach otherCoach = context.getBean("otherCoach", CricketCoach.class);
 
 		//Retrieve bean from spring container
 
@@ -29,6 +29,8 @@ public class HelloWorldSpringApplication {
 		//Call mthods on the 2nd bean
 		otherCoach.getWorkout();
 		otherCoach.getFortune();
+		otherCoach.getTeam();
+		otherCoach.getEmail();
 
 		//context.close();
 

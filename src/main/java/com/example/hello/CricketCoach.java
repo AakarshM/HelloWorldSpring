@@ -5,6 +5,8 @@ package com.example.hello;
  */
 public class CricketCoach implements Coach {
     private FortuneService fService;
+    private String email;
+    private String team;
 
     CricketCoach(){}
 
@@ -21,6 +23,25 @@ public class CricketCoach implements Coach {
 
     public void setfService(FortuneService fService){
         this.fService = fService;
+    }
+
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+    public void setTeam(String team){
+        this.team = team;
+    }
+
+
+    //Custom methods
+
+    public void getTeam(){
+        System.out.println("Cricket team: " + team);
+    }
+
+    public void getEmail(){
+        System.out.println("Cricket email: " + email);
     }
 
 }
