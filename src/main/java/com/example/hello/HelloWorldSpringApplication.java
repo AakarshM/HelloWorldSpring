@@ -19,9 +19,10 @@ public class HelloWorldSpringApplication {
 
 		//Retrieve bean from spring container
 
-		currentCoach.getWorkout();
-
 		//Call methods on the bean
+		currentCoach.getWorkout(); //Workout
+		currentCoach.getFortune(); //Using bean
+
 		//context.close();
 
 	}

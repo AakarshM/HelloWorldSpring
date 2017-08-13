@@ -15,4 +15,9 @@ public class FightCoach implements Coach{
     public void getWorkout(){
         System.out.println("Fight tonight!");
     }
+
+    @Override
+    public void getFortune(){
+        fService.getFortune();
+    }
 }

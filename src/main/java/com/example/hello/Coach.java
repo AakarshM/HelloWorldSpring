@@ -5,4 +5,5 @@ package com.example.hello;
  */
 public interface Coach {
     void getWorkout();
+    void getFortune();
 }

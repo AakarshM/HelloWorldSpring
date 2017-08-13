@@ -3,8 +3,19 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+    <!-- Define dependency-->
+    <bean id="myFortuneService"
+          class="com.example.hello.HappyFortuneService">
+    </bean>
+
+
     <bean id="myCoach"
         class="com.example.hello.FightCoach">
+
+        <!-- Set up constructor for injection-->
+        <constructor-arg ref="myFortuneService"/>
+
     </bean>
 
 </beans>
