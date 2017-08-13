@@ -10,6 +10,7 @@ public class TrackCoach implements Coach{
     private FortuneService fService;
 
     TrackCoach(FortuneService fService){
+        System.out.println("Calling Track coach constructor with ref of fService: " + fService);
         this.fService = fService;
     }
 
@@ -20,8 +21,18 @@ public class TrackCoach implements Coach{
 
     @Override
     public void getFortune(){
-        System.out.print("Track Coach: ");
+        System.out.println("Track Coach: ");
         fService.getFortune();
+    }
+
+    //Init method
+    public void doStartup(){
+        System.out.println("Track Coach: Starting up");
+    }
+
+    //Destroy method
+    public void doCleanUp(){
+        System.out.println("Track Coach: Cleaning up");
     }
 
 }

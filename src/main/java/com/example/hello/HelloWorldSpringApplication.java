@@ -11,7 +11,7 @@ public class HelloWorldSpringApplication {
 
 	public static void main(String[] args) {
 		//SpringApplication.run(HelloWorldSpringApplication.class, args);
-		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
 		//Load spring config
 
@@ -32,7 +32,7 @@ public class HelloWorldSpringApplication {
 		otherCoach.getTeam();
 		otherCoach.getEmail();
 
-		//context.close();
+		context.close();
 
 	}
 }

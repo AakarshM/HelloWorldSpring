@@ -11,12 +11,13 @@
 
     <!-- Define dependency-->
     <bean id="myFortuneService"
-          class="com.example.hello.${foo.fService}">
+          class="com.example.hello.BadFortuneService">
     </bean>
 
     <!-- For DI using constructor injection-->
     <bean id="myCoach"
-        class="com.example.hello.TrackCoach">
+        class="com.example.hello.TrackCoach"
+        init-method="doStartup" destroy-method="doCleanUp">
 
         <!-- Set up constructor for injection-->
         <constructor-arg ref="myFortuneService"/>
@@ -28,7 +29,7 @@
 
     <!-- For DI using setter injection-->
     <bean id="otherCoach"
-      class="com.example.hello.CricketCoach">
+      class="com.example.hello.CricketCoach" scope="prototype">
 
     <!-- Set up constructor for injection-->
     <property name="fService" ref="${foo.ref}"/>
