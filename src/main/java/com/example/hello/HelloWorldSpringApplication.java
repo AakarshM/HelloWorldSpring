@@ -1,7 +1,9 @@
 package com.example.hello;
 
+import javafx.application.Application;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
@@ -9,7 +11,7 @@ public class HelloWorldSpringApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HelloWorldSpringApplication.class, args);
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
 		//Load spring config
 
@@ -20,7 +22,7 @@ public class HelloWorldSpringApplication {
 		currentCoach.getWorkout();
 
 		//Call methods on the bean
-		context.close();
-		
+		//context.close();
+
 	}
 }
